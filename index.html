@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO & Content Text Utility Suite</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>SEO & Text Utility Suite</h1>
+      <button id="themeToggle" aria-label="Toggle Dark Mode">🌙 Dark Mode</button>
+    </header>
+
+    <div class="stats-grid">
+      <div class="stat-card"><span id="wordCount">0</span><label>Words</label></div>
+      <div class="stat-card"><span id="charCount">0</span><label>Characters</label></div>
+      <div class="stat-card"><span id="sentenceCount">0</span><label>Sentences</label></div>
+      <div class="stat-card"><span id="readingTime">0m</span><label>Read Time</label></div>
+    </div>
+
+    <textarea id="textInput" placeholder="Paste or type your content here to analyze and clean..."></textarea>
+
+    <div class="actions">
+      <button onclick="transformText('upper')">UPPERCASE</button>
+      <button onclick="transformText('lower')">lowercase</button>
+      <button onclick="transformText('title')">Title Case</button>
+      <button onclick="transformText('stripMarkdown')">Strip Markdown</button>
+      <button onclick="transformText('cleanSpaces')">Clean Spaces</button>
+      <button id="copyBtn" onclick="copyText()" class="primary">📋 Copy Clean Text</button>
+    </div>
+
+    <div class="serp-box">
+      <h3>Google SERP Preview Simulator</h3>
+      <div class="serp-card">
+        <div class="serp-url">https://example.com/your-page-url</div>
+        <div id="serpTitle" class="serp-title">Your Page Title Will Appear Here...</div>
+        <div id="serpDesc" class="serp-desc">Your meta description preview will display right here based on the text entered above. (Tip: Keep under 160 chars for optimal SEO).</div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
