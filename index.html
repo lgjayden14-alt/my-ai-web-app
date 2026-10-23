@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SEO & Content Text Utility Suite</title>
+  <title>OmniText | Free Word Counter, Case Converter & Google SERP Simulator</title>
+  <meta name="description" content="Free all-in-one content workspace. Real-time word counter, character limit checker, markdown stripper, case converter, and live Google SERP preview simulator.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <header>
-      <h1>SEO & Text Utility Suite</h1>
+      <div class="brand">
+        <h1>OmniText</h1>
+        <span class="tagline">SEO & Content Utility Suite</span>
+      </div>
       <button id="themeToggle" aria-label="Toggle Dark Mode">🌙 Dark Mode</button>
     </header>
 
@@ -20,7 +24,7 @@
       <div class="stat-card"><span id="readingTime">0m</span><label>Read Time</label></div>
     </div>
 
-    <textarea id="textInput" placeholder="Paste or type your content here to analyze and clean..."></textarea>
+    <textarea id="textInput" placeholder="Paste or type your content here to analyze word count, strip markdown, and preview your Google SERP snippet instantly..."></textarea>
 
     <div class="actions">
       <button onclick="transformText('upper')">UPPERCASE</button>
@@ -34,11 +38,17 @@
     <div class="serp-box">
       <h3>Google SERP Preview Simulator</h3>
       <div class="serp-card">
-        <div class="serp-url">https://example.com/your-page-url</div>
+        <div class="serp-url">https://yourwebsite.com/blog-post-slug</div>
         <div id="serpTitle" class="serp-title">Your Page Title Will Appear Here...</div>
-        <div id="serpDesc" class="serp-desc">Your meta description preview will display right here based on the text entered above. (Tip: Keep under 160 chars for optimal SEO).</div>
+        <div id="serpDesc" class="serp-desc">Your meta description preview will display right here based on the text entered above. Keep titles under 60 chars and descriptions under 160 chars for optimal SEO.</div>
       </div>
     </div>
+
+    <!-- SEO Content & Keyword Rich Footer Text for Organic Indexing -->
+    <section class="seo-content">
+      <h2>About OmniText: The Ultimate Online Content & SEO Toolkit</h2>
+      <p>OmniText is a lightning-fast, 100% client-side utility suite designed for bloggers, copywriters, and SEO professionals. Whether you need an accurate <strong>word and character counter</strong>, a reliable <strong>markdown code stripper</strong>, or a live <strong>Google search snippet simulator</strong> to check your meta descriptions before publishing, OmniText processes everything securely in your browser with zero data storage.</p>
+    </section>
   </div>
   <script src="app.js"></script>
 </body>
