@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fancy Text Generator & Font Changer | OmniText</title>
+  <meta name="description" content="Free fancy text generator and online font changer. Convert normal text into cool Unicode fonts for Instagram bios, Twitter/X posts, Discord, and usernames.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <a href="index.html" class="back-link">← Back to Hub</a>
+        <h1>Fancy Text Generator & Font Changer</h1>
+      </div>
+      <button id="themeToggle" aria-label="Toggle Dark Mode">🌙 Dark Mode</button>
+    </header>
+
+    <div class="hero-section" style="margin-bottom: 20px;">
+      <p>Type standard text below to generate fancy Unicode styles instantly for social media bios, headers, and usernames.</p>
+    </div>
+
+    <input type="text" id="fontInput" placeholder="Type or paste your text here..." style="font-size: 1.1rem; padding: 15px;">
+
+    <!-- Dynamic Output Grid for Font Styles -->
+    <div id="fontResults" class="font-results-grid">
+      <div class="font-placeholder">Start typing above to see custom Unicode fonts...</div>
+    </div>
+
+    <!-- Ad Monetization Zone -->
+    <div class="ad-container">
+      <span class="ad-label">Advertisement</span>
+      <div class="ad-slot">Google AdSense Banner Slot</div>
+    </div>
+
+    <section class="seo-content">
+      <h2>How the Fancy Font Generator Works</h2>
+      <p>This online font changer converts standard alphanumeric characters into decorative Unicode glyphs. Because these generated styles are Unicode symbols rather than true desktop font files, you can copy and paste them directly into Instagram bios, TikTok captions, Discord profiles, and gaming usernames without installing anything.</p>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
