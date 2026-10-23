@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdown Syntax Stripper & Space Cleaner | OmniText</title>
+  <meta name="description" content="Remove markdown formatting symbols, bold tags, links, and extra whitespaces instantly online.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <a href="index.html" class="back-link">← Back to Hub</a>
+        <h1>Markdown Stripper & Space Cleaner</h1>
+      </div>
+      <button id="themeToggle" aria-label="Toggle Dark Mode">🌙 Dark Mode</button>
+    </header>
+
+    <textarea id="textInput" placeholder="Paste text containing markdown (*, **, #, >, etc.) here..."></textarea>
+
+    <div class="actions">
+      <button onclick="transformText('stripMarkdown')">🧹 Strip Markdown</button>
+      <button onclick="transformText('cleanSpaces')">Space Cleaner</button>
+      <button id="copyBtn" onclick="copyText()" class="primary">📋 Copy Clean Text</button>
+    </div>
+
+    <div class="ad-container">
+      <span class="ad-label">Advertisement</span>
+      <div class="ad-slot">Google AdSense Banner Slot</div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

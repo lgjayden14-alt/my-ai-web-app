@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Case Converter - UPPERCASE, lowercase, Title Case | OmniText</title>
+  <meta name="description" content="Free online text case converter. Quickly change text to uppercase, lowercase, title case, and sentence case.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <a href="index.html" class="back-link">← Back to Hub</a>
+        <h1>Case Converter</h1>
+      </div>
+      <button id="themeToggle" aria-label="Toggle Dark Mode">🌙 Dark Mode</button>
+    </header>
+
+    <textarea id="textInput" placeholder="Paste your text here to convert casing..."></textarea>
+
+    <div class="actions">
+      <button onclick="transformText('upper')">UPPERCASE</button>
+      <button onclick="transformText('lower')">lowercase</button>
+      <button onclick="transformText('title')">Title Case</button>
+      <button id="copyBtn" onclick="copyText()" class="primary">📋 Copy Converted Text</button>
+    </div>
+
+    <div class="ad-container">
+      <span class="ad-label">Advertisement</span>
+      <div class="ad-slot">Google AdSense Banner Slot</div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

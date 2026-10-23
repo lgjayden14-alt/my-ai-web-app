@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google SERP Snippet Preview Simulator & Meta Checker | OmniText</title>
+  <meta name="description" content="Preview your meta titles and descriptions in real-time before publishing. Ensure optimal character lengths for Google search results.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <a href="index.html" class="back-link">← Back to Hub</a>
+        <h1>Google SERP Simulator</h1>
+      </div>
+      <button id="themeToggle" aria-label="Toggle Dark Mode">🌙 Dark Mode</button>
+    </header>
+
+    <div class="serp-builder">
+      <div class="input-group">
+        <label for="metaTitle">SEO Title (Recommended: max 60 chars)</label>
+        <input type="text" id="metaTitle" placeholder="Enter your page title..." maxlength="100">
+        <span class="char-counter"><span id="titleCount">0</span>/60</span>
+      </div>
+
+      <div class="input-group">
+        <label for="metaDesc">Meta Description (Recommended: max 160 chars)</label>
+        <textarea id="metaDesc" placeholder="Enter your meta description snippet here..." maxlength="300"></textarea>
+        <span class="char-counter"><span id="descCount">0</span>/160</span>
+      </div>
+    </div>
+
+    <div class="serp-box">
+      <h3>Live Google Search Results Preview</h3>
+      <div class="serp-card">
+        <div class="serp-url">https://omnitext.com › your-page-slug</div>
+        <div id="previewTitle" class="serp-title">Your Page Title Will Appear Here...</div>
+        <div id="previewDesc" class="serp-desc">Your meta description preview will display right here based on the fields above. Ensure key terms fit within display limits.</div>
+      </div>
+    </div>
+
+    <!-- Ad Monetization Slot -->
+    <div class="ad-container">
+      <span class="ad-label">Advertisement</span>
+      <div class="ad-slot">Google AdSense Banner Slot</div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

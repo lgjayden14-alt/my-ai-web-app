@@ -15,17 +15,43 @@ body {
 header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
 .brand h1 { font-size: 1.6rem; margin: 0; font-weight: 800; color: var(--accent); letter-spacing: -0.03em; }
 .tagline { font-size: 0.8rem; opacity: 0.7; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; }
+.back-link { display: block; font-size: 0.8rem; color: var(--accent); text-decoration: none; margin-bottom: 4px; font-weight: 600; }
+.back-link:hover { text-decoration: underline; }
+
+/* Hub Tool Grid */
+.hero-section { text-align: center; margin-bottom: 30px; }
+.hero-section h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 10px; }
+.hero-section p { opacity: 0.75; font-size: 1rem; }
+.tool-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 30px; }
+.tool-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; text-decoration: none; color: var(--text); box-shadow: var(--card-shadow); transition: all 0.2s ease; }
+.tool-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.tool-icon { font-size: 1.8rem; margin-bottom: 10px; }
+.tool-card h3 { font-size: 1.1rem; margin: 0 0 8px 0; color: var(--accent); }
+.tool-card p { font-size: 0.85rem; opacity: 0.75; margin: 0; line-height: 1.4; }
+
+/* Stats & Textarea */
 .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
 .stat-card { background: var(--card); border: 1px solid var(--border); box-shadow: var(--card-shadow); padding: 15px; border-radius: 10px; text-align: center; }
 .stat-card span { display: block; font-size: 1.6rem; font-weight: 800; color: var(--accent); }
 .stat-card label { font-size: 0.8rem; opacity: 0.75; text-transform: uppercase; letter-spacing: 0.05em; }
-textarea { width: 100%; height: 220px; padding: 15px; background: var(--card); color: var(--text); border: 1px solid var(--border); border-radius: 10px; font-size: 1rem; box-sizing: border-box; margin-bottom: 15px; resize: vertical; box-shadow: var(--card-shadow); outline: none; }
-textarea:focus { border-color: var(--accent); }
+textarea, input[type="text"] { width: 100%; padding: 15px; background: var(--card); color: var(--text); border: 1px solid var(--border); border-radius: 10px; font-size: 1rem; box-sizing: border-box; margin-bottom: 15px; box-shadow: var(--card-shadow); outline: none; }
+textarea { height: 200px; resize: vertical; }
+textarea:focus, input[type="text"]:focus { border-color: var(--accent); }
+
+/* SERP Builder Specifics */
+.serp-builder { background: var(--card); border: 1px solid var(--border); padding: 20px; border-radius: 10px; margin-bottom: 20px; box-shadow: var(--card-shadow); }
+.input-group { position: relative; margin-bottom: 15px; }
+.input-group:last-child { margin-bottom: 0; }
+.input-group label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; opacity: 0.8; }
+.char-counter { position: absolute; right: 12px; top: 35px; font-size: 0.75rem; opacity: 0.6; font-family: monospace; }
+
 .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 30px; }
 button { padding: 9px 16px; background: var(--card); color: var(--text); border: 1px solid var(--border); border-radius: 6px; cursor: pointer; font-weight: 500; box-shadow: var(--card-shadow); transition: all 0.1s ease; }
 button:hover { border-color: var(--accent); }
 button.primary { background: var(--accent); color: white; border: none; }
 button.primary:hover { background: var(--accent-hover); }
+
+/* SERP Preview Box */
 .serp-box { background: var(--card); border: 1px solid var(--border); box-shadow: var(--card-shadow); padding: 20px; border-radius: 10px; margin-bottom: 30px; }
 .serp-box h3 { margin-top: 0; font-size: 1rem; margin-bottom: 12px; opacity: 0.8; }
 .serp-url { color: #15803d; font-size: 0.85rem; margin-bottom: 4px; font-family: monospace; }
@@ -34,6 +60,16 @@ body.dark .serp-url { color: #4ade80; }
 body.dark .serp-title { color: #8ab4f8; }
 .serp-desc { color: #4d5156; font-size: 0.875rem; line-height: 1.4; word-break: break-all; }
 body.dark .serp-desc { color: #bdc1c6; }
+
+/* Monetization Ad Slots */
+.ad-container { margin: 30px 0; text-align: center; }
+.ad-label { display: block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.5; margin-bottom: 6px; }
+.ad-slot { background: var(--card); border: 2px dashed var(--border); padding: 20px; border-radius: 8px; font-size: 0.85rem; opacity: 0.6; font-style: italic; }
+
 .seo-content { background: var(--card); border: 1px solid var(--border); padding: 20px; border-radius: 10px; font-size: 0.9rem; line-height: 1.6; opacity: 0.85; box-shadow: var(--card-shadow); }
 .seo-content h2 { font-size: 1.1rem; margin-top: 0; color: var(--text); opacity: 1; }
-@media (max-width: 600px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+
+@media (max-width: 600px) { 
+  .tool-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); } 
+}

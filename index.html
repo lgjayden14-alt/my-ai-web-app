@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OmniText | Free Word Counter, Case Converter & Google SERP Simulator</title>
+  <title>OmniText | Free Online SEO & Content Utility Suite</title>
   <meta name="description" content="Free all-in-one content workspace. Real-time word counter, character limit checker, markdown stripper, case converter, and live Google SERP preview simulator.">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -17,37 +17,47 @@
       <button id="themeToggle" aria-label="Toggle Dark Mode">🌙 Dark Mode</button>
     </header>
 
-    <div class="stats-grid">
-      <div class="stat-card"><span id="wordCount">0</span><label>Words</label></div>
-      <div class="stat-card"><span id="charCount">0</span><label>Characters</label></div>
-      <div class="stat-card"><span id="sentenceCount">0</span><label>Sentences</label></div>
-      <div class="stat-card"><span id="readingTime">0m</span><label>Read Time</label></div>
+    <div class="hero-section">
+      <h2>Professional Content Tools for SEO & Copywriters</h2>
+      <p>Select a utility below to start analyzing, optimizing, and cleaning your content instantly in your browser with zero server latency.</p>
     </div>
 
-    <textarea id="textInput" placeholder="Paste or type your content here to analyze word count, strip markdown, and preview your Google SERP snippet instantly..."></textarea>
+    <!-- Tool Category Grid -->
+    <div class="tool-grid">
+      <a href="word-counter.html" class="tool-card">
+        <div class="tool-icon">📊</div>
+        <h3>Word & Character Counter</h3>
+        <p>Real-time word count, character limits, sentence count, and reading time estimation.</p>
+      </a>
 
-    <div class="actions">
-      <button onclick="transformText('upper')">UPPERCASE</button>
-      <button onclick="transformText('lower')">lowercase</button>
-      <button onclick="transformText('title')">Title Case</button>
-      <button onclick="transformText('stripMarkdown')">Strip Markdown</button>
-      <button onclick="transformText('cleanSpaces')">Clean Spaces</button>
-      <button id="copyBtn" onclick="copyText()" class="primary">📋 Copy Clean Text</button>
+      <a href="serp-simulator.html" class="tool-card">
+        <div class="tool-icon">🔍</div>
+        <h3>Google SERP Simulator</h3>
+        <p>Preview how your title tags and meta descriptions appear on Google search results.</p>
+      </a>
+
+      <a href="case-converter.html" class="tool-card">
+        <div class="tool-icon">🔠</div>
+        <h3>Case Converter</h3>
+        <p>Instantly transform text between UPPERCASE, lowercase, and Title Case formats.</p>
+      </a>
+
+      <a href="markdown-stripper.html" class="tool-card">
+        <div class="tool-icon">🧹</div>
+        <h3>Markdown & Space Cleaner</h3>
+        <p>Strip markdown syntax formatting and clean up unwanted extra whitespace instantly.</p>
+      </a>
     </div>
 
-    <div class="serp-box">
-      <h3>Google SERP Preview Simulator</h3>
-      <div class="serp-card">
-        <div class="serp-url">https://yourwebsite.com/blog-post-slug</div>
-        <div id="serpTitle" class="serp-title">Your Page Title Will Appear Here...</div>
-        <div id="serpDesc" class="serp-desc">Your meta description preview will display right here based on the text entered above. Keep titles under 60 chars and descriptions under 160 chars for optimal SEO.</div>
-      </div>
+    <!-- Ad Monetization Slot Hub -->
+    <div class="ad-container">
+      <span class="ad-label">Advertisement</span>
+      <div class="ad-slot">Google AdSense / Sponsorship Banner Zone</div>
     </div>
 
-    <!-- SEO Content & Keyword Rich Footer Text for Organic Indexing -->
     <section class="seo-content">
-      <h2>About OmniText: The Ultimate Online Content & SEO Toolkit</h2>
-      <p>OmniText is a lightning-fast, 100% client-side utility suite designed for bloggers, copywriters, and SEO professionals. Whether you need an accurate <strong>word and character counter</strong>, a reliable <strong>markdown code stripper</strong>, or a live <strong>Google search snippet simulator</strong> to check your meta descriptions before publishing, OmniText processes everything securely in your browser with zero data storage.</p>
+      <h2>About OmniText</h2>
+      <p>OmniText is built for digital creators, SEO professionals, and writers who need lightning-fast, reliable web utilities without software bloat. All tools run 100% client-side to ensure absolute data privacy.</p>
     </section>
   </div>
   <script src="app.js"></script>

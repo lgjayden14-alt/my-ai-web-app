@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Online Word Counter & Character Limit Checker | OmniText</title>
+  <meta name="description" content="Accurate live word count, character counter, sentence tracker, and reading time calculator. 100% free client-side text utility.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <a href="index.html" class="back-link">← Back to Hub</a>
+        <h1>Word & Character Counter</h1>
+      </div>
+      <button id="themeToggle" aria-label="Toggle Dark Mode">🌙 Dark Mode</button>
+    </header>
+
+    <div class="stats-grid">
+      <div class="stat-card"><span id="wordCount">0</span><label>Words</label></div>
+      <div class="stat-card"><span id="charCount">0</span><label>Characters</label></div>
+      <div class="stat-card"><span id="sentenceCount">0</span><label>Sentences</label></div>
+      <div class="stat-card"><span id="readingTime">0m</span><label>Read Time</label></div>
+    </div>
+
+    <textarea id="textInput" placeholder="Paste or type your text here to count words and characters instantly..."></textarea>
+
+    <div class="actions">
+      <button id="copyBtn" onclick="copyText()" class="primary">📋 Copy Clean Text</button>
+    </div>
+
+    <!-- Ad Monetization Slot -->
+    <div class="ad-container">
+      <span class="ad-label">Advertisement</span>
+      <div class="ad-slot">Google AdSense Banner Slot</div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

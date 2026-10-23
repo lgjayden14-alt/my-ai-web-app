@@ -1,32 +1,29 @@
+// Generic text stats and transformation handlers
 const textInput = document.getElementById('textInput');
-const wordCount = document.getElementById('wordCount');
-const charCount = document.getElementById('charCount');
-const sentenceCount = document.getElementById('sentenceCount');
-const readingTime = document.getElementById('readingTime');
-const serpTitle = document.getElementById('serpTitle');
-const serpDesc = document.getElementById('serpDesc');
-
-textInput.addEventListener('input', updateStats);
+if (textInput) {
+  textInput.addEventListener('input', updateStats);
+}
 
 function updateStats() {
   const text = textInput.value;
-  charCount.textContent = text.length;
+  const charElem = document.getElementById('charCount');
+  const wordElem = document.getElementById('wordCount');
+  const sentenceElem = document.getElementById('sentenceCount');
+  const readElem = document.getElementById('readingTime');
+
+  if (charElem) charElem.textContent = text.length;
   
   const words = text.trim() ? text.trim().split(/\s+/).length : 0;
-  wordCount.textContent = words;
+  if (wordElem) wordElem.textContent = words;
   
   const sentences = text.trim() ? text.split(/[.!?]+/).filter(Boolean).length : 0;
-  sentenceCount.textContent = sentences;
+  if (sentenceElem) sentenceElem.textContent = sentences;
   
-  readingTime.textContent = Math.ceil(words / 200) + 'm';
-
-  // SERP Preview Logic (Line 1 = Title, Rest = Description)
-  const lines = text.split('\n').filter(l => l.trim() !== '');
-  serpTitle.textContent = lines[0] ? lines[0].substring(0, 60) : 'Your Page Title Will Appear Here...';
-  serpDesc.textContent = lines[1] ? lines.slice(1).join(' ').substring(0, 160) : (text.substring(0, 160) || 'Your meta description preview will display right here.');
+  if (readElem) readElem.textContent = Math.ceil(words / 200) + 'm';
 }
 
 function transformText(type) {
+  if (!textInput) return;
   let text = textInput.value;
   if (type === 'upper') text = text.toUpperCase();
   if (type === 'lower') text = text.toLowerCase();
@@ -38,14 +35,43 @@ function transformText(type) {
 }
 
 function copyText() {
+  if (!textInput) return;
   navigator.clipboard.writeText(textInput.value);
   const btn = document.getElementById('copyBtn');
   btn.textContent = '✅ Copied!';
   setTimeout(() => btn.textContent = '📋 Copy Clean Text', 2000);
 }
 
-document.getElementById('themeToggle').addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-  const isDark = document.body.classList.contains('dark');
-  document.getElementById('themeToggle').textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
-});
+// Dedicated SERP Simulator Logic
+const metaTitle = document.getElementById('metaTitle');
+const metaDesc = document.getElementById('metaDesc');
+if (metaTitle && metaDesc) {
+  const previewTitle = document.getElementById('previewTitle');
+  const previewDesc = document.getElementById('previewDesc');
+  const titleCount = document.getElementById('titleCount');
+  const descCount = document.getElementById('descCount');
+
+  function updateSerp() {
+    const tVal = metaTitle.value;
+    const dVal = metaDesc.value;
+    
+    titleCount.textContent = tVal.length;
+    descCount.textContent = dVal.length;
+
+    previewTitle.textContent = tVal ? tVal : 'Your Page Title Will Appear Here...';
+    previewDesc.textContent = dVal ? dVal : 'Your meta description preview will display right here based on the fields above.';
+  }
+
+  metaTitle.addEventListener('input', updateSerp);
+  metaDesc.addEventListener('input', updateSerp);
+}
+
+// Theme Toggle Handler across all pages
+const themeToggle = document.getElementById('themeToggle');
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    const isDark = document.body.classList.contains('dark');
+    themeToggle.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+  });
+}
